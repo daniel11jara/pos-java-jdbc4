@@ -1,6 +1,7 @@
 package conexaojdbc;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 
 public class SingleConnection {
@@ -23,7 +24,7 @@ public class SingleConnection {
 		try {
 			
 			if (connection == null) {// se a conexao for igual a nula, vai conectar, se não, não faz nada
-				Class.forName("org.postgresql.Drive"); //carregando o drive do postgre
+				Class.forName("org.postgresql.Driver"); //carregando o drive do postgre
 				connection = DriverManager.getConnection(url, user, password);
 				connection.setAutoCommit(false);//não vai salvar automaticamente, usuario decide se a operacao vai ser salva
 				System.out.println("conectou com sucesso");
