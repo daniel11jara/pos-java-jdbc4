@@ -2,11 +2,12 @@ package conexaojdbc;
 
 import java.sql.Connection;
 
+
 import java.sql.DriverManager;
 
 public class SingleConnection {
 	
-	private static String url = "jdbc:postgresql://localhost:5433/posjava";
+	private static String url = "jdbc:postgresql://localhost:5433/posjava2";
 	private static String password = "admin";
 	private static String user = "postgres";
 	private static Connection connection = null;
@@ -32,6 +33,7 @@ public class SingleConnection {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
+			
 		}
 	}
 	
